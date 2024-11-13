@@ -117,7 +117,7 @@
 	cursor: pointer;
 	overflow: hidden;
 	user-select: none;
-	user-drag: none;
+	-webkit-user-drag: none;
 	transition: all 0.3s;
 }
 .btn--primary,
@@ -414,25 +414,18 @@
 
 .hero__bg {
 	position: absolute;
-	top: 80px;
 	width: 100%;
 	height: 100%;
-	background-image: url("../images");
+	background-image: url("../images/heroPic.png");
 	background-size: 400px;
 	background-repeat: no-repeat;
-	background-position: top right;
 	left: 50%;
 	transform: translateX(-50%);
 	max-width: 1140px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1172px) {
 	.hero__bg {
-		background-size: 320px;
-	}
-}
-@media (max-width: 480px) {
-	.hero__bg {
-		background-size: 200px;
+		height: 0 !important;
 	}
 }
 .hero__heading {
@@ -483,6 +476,7 @@
 	font-size: 18px;
 	line-height: 40px;
 	margin-bottom: 24px;
+	padding: 0px 24px;
 }
 .quote__name span {
 	color: #e881a7;
@@ -537,11 +531,6 @@
 	max-height: 100%;
 }
 @media (max-width: 768px) {
-	.skill-card__icon {
-		top: 0;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
 	.skill-card {
 		padding: 0;
 		margin-top: 48px;
@@ -551,7 +540,7 @@
 		padding-top: 48px;
 	}
 	.skill-group {
-		padding-bottom: 0;
+		padding: 0px 24px;
 	}
 }
 /*-------------------------*/
